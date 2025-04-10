@@ -7,20 +7,14 @@
   },
   {
     "id": "2",
-    "content": "Recordario ir a Santiago a ver a mi gonza",
+    "content": "Recordario ir a Santiago 18",
     "createdAt": 1712749454000,
-    "important": false
-  },
-  {
-    "id": "59c2347f-29f3-4a84-b8c5-e516825fc787",
-    "content": "prueba 3",
-    "createdAt": 1743981056098,
     "important": true
   },
   {
-    "id": "ab0b61ae-cd24-4bd0-97a7-b72274773821",
-    "content": "Recordar que mañana es miercoles",
-    "createdAt": 1744070593859,
+    "id": "59c2347f-29f3-4a84-b8c5-e516825fc787",
+    "content": "prueba final",
+    "createdAt": 1743981056098,
     "important": false
   }
 ]

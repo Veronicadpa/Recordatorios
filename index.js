@@ -53,7 +53,7 @@ function generarHashPass(password, salt, keylen = 64) {
 
 // desde aquí se llama por metodo post al login con los datos ingreados y luego se valida en autorizacion
 app.post("/api/auth/login", async (req, res) => {
-  console.log("llegue al login");
+  //console.log("llegue al login");
   const { username, password } = req.body;
   const user = usuarios.find((u) => u.username === username);
 
@@ -85,7 +85,7 @@ app.post("/api/auth/login", async (req, res) => {
 });
 
 // Listar recordatorios
-app.get("/api/reminders", (req, res) => {
+app.get("/api/reminders", autorizacion, (req, res) => {
   res.setHeader("Content-Type", "application/json");
 
   const orderedRecordatorios = recordatorios.sort((a, b) => {
@@ -106,7 +106,7 @@ app.get("/api/reminders", (req, res) => {
 
 const FILE_PATH = "./recordatorios.json";
 
-app.post("/api/reminders", (req, res) => {
+app.post("/api/reminders", autorizacion, (req, res) => {
   res.setHeader("Content-Type", "application/json");
   const { content, important } = req.body;
 
@@ -138,7 +138,7 @@ app.post("/api/reminders", (req, res) => {
 
 //Actualizar recordatorio
 
-app.patch("/api/reminders/:id", (req, res) => {
+app.patch("/api/reminders/:id", autorizacion, (req, res) => {
   res.setHeader("Content-Type", "application/json");
   const { id } = req.params;
 
